@@ -24,29 +24,23 @@ class StudentInfoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        title: Text("Информация о студенте"),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            const Text("Михеева Дарья Сергеевна", style: TextStyle(fontSize: 20)),
+            SizedBox(height: 10),
+            const Text("Группа: ИКБО-07-22", style: TextStyle(fontSize: 20)),
+            SizedBox(height: 10),
+            const Text("Номер студенческого: 22И0345", style: TextStyle(fontSize: 20)),
+            SizedBox(height: 10),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
